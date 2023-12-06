@@ -1,5 +1,7 @@
 package com.maxie;
 
+import com.maxie.cli.CommandExecutor;
+
 /**
  * @desc：示例
  * @author: 徐健
@@ -7,6 +9,14 @@ package com.maxie;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        String projectPath = System.getProperty("user.dir");
+        System.out.println(projectPath);
+        // args = new String[]{"generator","-l","-a","-o"};
+        // args = new String[]{"list"};
+        // args = new String[]{"config"};
+        CommandExecutor commandExecutor = new CommandExecutor();
+        commandExecutor.doExecutor(args);
+
     }
 }

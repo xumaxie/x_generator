@@ -22,20 +22,20 @@ import java.util.Objects;
  * @create: 2023-12-05 10:04
  **/
 public class DynamicGenerator {
-    public static void main(String[] args) throws IOException, TemplateException {
-        Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
-        //注意路径
-        String inputPath = System.getProperty("user.dir") + File.separator + "x-generator-basic/src/main/resources/template/MainTemplate.java.ftl";
-
-        String outputPath = System.getProperty("user.dir") + File.separator + "acm-template/src/com/maxie/acm/MainTemplate.java";
-
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        // mainTemplateConfig.setOutputText();
-        mainTemplateConfig.setLoop(false);
-        // mainTemplateConfig.setAuthor();
-        doGenerator(inputPath,outputPath,mainTemplateConfig);
-
-    }
+    // public static void main(String[] args) throws IOException, TemplateException {
+    //     Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
+    //     //注意路径
+    //     String inputPath = System.getProperty("user.dir") + File.separator + "x-generator-basic/src/main/resources/template/MainTemplate.java.ftl";
+    //
+    //     String outputPath = System.getProperty("user.dir") + File.separator + "acm-template/src/com/maxie/acm/MainTemplate.java";
+    //
+    //     MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
+    //     // mainTemplateConfig.setOutputText();
+    //     mainTemplateConfig.setLoop(false);
+    //     // mainTemplateConfig.setAuthor();
+    //     doGenerator(inputPath,outputPath,mainTemplateConfig);
+    //
+    // }
 
     public static void doGenerator(String inputPath,String outputPath,Object object) throws IOException, TemplateException {
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
